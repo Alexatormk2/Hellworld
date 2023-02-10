@@ -1,1 +1,6 @@
-{"parent": "hellworld:block/sakura_sapling"}
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hellworld:block/sakura_sapling"
+  }
+}

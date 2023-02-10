@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "sakura",
+  "ingredients": [
+    {
+      "item": "hellworld:sakura_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "hellworld:sakura_planks"
+  }
+}
