@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "hellworld:block/sakura_leaves"
+  }
+}

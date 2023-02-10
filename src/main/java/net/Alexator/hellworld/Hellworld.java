@@ -1,6 +1,8 @@
 package net.Alexator.hellworld;
 
 import com.mojang.logging.LogUtils;
+import net.Alexator.hellworld.block.ModBlocks;
+import net.Alexator.hellworld.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +27,8 @@ public class Hellworld
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
