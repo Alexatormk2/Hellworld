@@ -1,6 +1,7 @@
 package net.Alexator.hellworld.block;
 
 import net.Alexator.hellworld.Hellworld;
+import net.Alexator.hellworld.block.custom.HealingBlock;
 import net.Alexator.hellworld.item.ModCreativeModeTab;
 import net.Alexator.hellworld.item.ModItems;
 import net.minecraft.client.tutorial.Tutorial;
@@ -26,16 +27,18 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, Hellworld.MOD_ID);
 
     public static final RegistryObject<Block> SAKURA_LOG = registerBlock("sakura_log",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(10).strength(6f).sound(SoundType.WOOD)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(6f).sound(SoundType.WOOD)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
+    public static final RegistryObject<Block> HEALING_BLOCK= registerBlock("healing_block",
+            () -> new HealingBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.WOOD).requiresCorrectToolForDrops()), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
     public static final RegistryObject<Block> SAKURA_LEAVES = registerBlock("sakura_leaves",
-            () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).destroyTime(10).strength(6f).requiresCorrectToolForDrops().sound(SoundType.GRASS)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
+            () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).strength(2f).requiresCorrectToolForDrops().sound(SoundType.GRASS)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
     public static final RegistryObject<Block> SAKURA_PLANKS = registerBlock("sakura_planks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(10).strength(6f).sound(SoundType.WOOD)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(4f).sound(SoundType.WOOD)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
     public static final RegistryObject<Block> SAKURA_SAPLING = registerBlock("sakura_sapling",
-            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT).destroyTime(10).strength(6f).sound(SoundType.GRASS)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
+            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT).strength(1f).sound(SoundType.GRASS)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
 
     public static final RegistryObject<Block> SAKURA_FLOWER = registerBlock("sakura_flower",
-            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT).destroyTime(10).strength(6f).sound(SoundType.GRASS)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
+            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT).strength(1f).sound(SoundType.GRASS)), ModCreativeModeTab.HELLWORD_TAB_BLOCK);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
